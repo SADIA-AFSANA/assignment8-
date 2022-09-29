@@ -21,7 +21,7 @@ const Players = () => {
             <div className='short-p'>
                 <h3>Select Best Players</h3>
             </div>
-            <div>
+            <div className='player-container'>
                 {
                     players.map(player => <Player
                         key={player.id}

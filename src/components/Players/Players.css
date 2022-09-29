@@ -14,3 +14,8 @@
 .short-p {
     padding-left: 50px;
 }
+
+.player-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+}
