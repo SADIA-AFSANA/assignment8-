@@ -12,6 +12,7 @@ const Cart = ({ cart }) => {
             <div>
                 <h3>Exercise time : {total}s</h3>
 
+
             </div>
         </div>
     );

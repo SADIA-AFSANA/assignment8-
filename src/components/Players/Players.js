@@ -4,6 +4,8 @@ import React, { useEffect, useState } from 'react';
 import './Players.css'
 import Player from '../Player/Player';
 import Cart from '../Cart/Cart';
+import { ToastContainer, toast } from 'react-toastify';
+
 
 const Players = () => {
 
@@ -22,6 +24,10 @@ const Players = () => {
         setCart(newCart);
 
     }
+    const alert = () => {
+        toast("Wow so easy!");
+    }
+
 
     return (
         <div>
@@ -68,9 +74,10 @@ const Players = () => {
                     <div className='addToCart'>
                         <h2>Exercise Details</h2>
                         <Cart cart={cart}></Cart>
+                        <button onClick={alert} className="comp">Activity Completed</button> <ToastContainer />
                     </div>
                 </div>
-                {/* cart */}
+
 
             </div>
             <div className='question'>
