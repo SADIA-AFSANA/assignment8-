@@ -12,15 +12,16 @@ const Cart = ({ cart }) => {
 
     const [breakeTime, setBreakTime] = useState(0);
     const display = (time) => {
+
+        localStorage.setItem('time', breakeTime)
+        const breakTime = localStorage.getItem('time');
+
         setBreakTime(time)
     }
-    useEffect(() => {
-        localStorage.setItem('time', breakeTime)
+    // useEffect(() => {
+    //     localStorage.setItem('time', breakeTime)
 
-    }, [breakeTime]);
-
-
-
+    // }, [breakeTime]);
 
     return (
         <div>
