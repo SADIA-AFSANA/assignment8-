@@ -2,13 +2,14 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBriefcaseClock } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useState } from 'react';
 import './Players.css'
+import Player from '../Player/Player';
 
 const Players = () => {
     const [players, setPlayers] = useState([]);
     useEffect(() => {
         fetch('fakeData.json')
             .then(res => res.json())
-            .then(data => console.log(data))
+            .then(data => setPlayers(data))
     }, []);
     return (<div className='activities'>
         <div className="players-container">
@@ -19,6 +20,11 @@ const Players = () => {
             </div>
             <div className='short-p'>
                 <h3>Select Best Players</h3>
+            </div>
+            <div>
+                {
+                    players.map(player => <Player></Player>)
+                }
             </div>
         </div>
         <div className="cart-container">
