@@ -7,9 +7,11 @@ const Player = (props) => {
     return (
         <div className='player'>
             <img src={picture} alt="" ></img>
-            <h3>{name}</h3>
-            <p>Age: {age}</p>
-            <p>Time:{time}</p>
+            <div className='info'>
+                <h3>{name}</h3>
+                <p>Age: {age}</p>
+                <p>Time:{time}</p>
+            </div>
             <div>
                 <button className='btn'>Add To Cart</button>
             </div>

@@ -3,6 +3,7 @@
     height: 450px;
     border: 1px solid gray;
     border-radius: 10px;
+    position: relative;
 
 }
 
@@ -14,7 +15,17 @@
 
 }
 
+.info {
+    padding-left: 20px;
+}
+
 .btn {
     width: 100%;
+    background-color: darkseagreen;
+    border: none;
+    border-radius: 0px 0px 8px 8px;
+    padding: 10px;
+    position: absolute;
+    bottom: 0;
 
 }
