@@ -13,17 +13,21 @@ const Players = () => {
 
     const [players, setPlayers] = useState([]);
     const [cart, setCart] = useState([]);
+
+
     useEffect(() => {
         fetch('fakeData.json')
             .then(res => res.json())
             .then(data => setPlayers(data))
     }, []);
     const handleAddToCart = (player) => {
-        console.log(player);
+        // console.log(player);
         const newCart = [...cart, player];
         setCart(newCart);
 
     }
+
+
     const alert = () => {
         toast("Wow so easy!");
     }
