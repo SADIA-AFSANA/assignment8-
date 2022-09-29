@@ -3,14 +3,26 @@ import { faBriefcaseClock } from '@fortawesome/free-solid-svg-icons'
 import React, { useEffect, useState } from 'react';
 import './Players.css'
 import Player from '../Player/Player';
+import Cart from '../Cart/Cart';
 
 const Players = () => {
+
+
+
     const [players, setPlayers] = useState([]);
+    const [cart, setCart] = useState([]);
     useEffect(() => {
         fetch('fakeData.json')
             .then(res => res.json())
             .then(data => setPlayers(data))
     }, []);
+    const handleAddToCart = (player) => {
+        console.log(player);
+        const newCart = [...cart, player];
+        setCart(newCart);
+
+    }
+
     return (
         <div>
             <div className='activities'>
@@ -28,6 +40,7 @@ const Players = () => {
                             players.map(player => <Player
                                 key={player.id}
                                 player={player}
+                                handleAddToCart={handleAddToCart}
                             ></Player>)
                         }
                     </div>
@@ -52,7 +65,13 @@ const Players = () => {
                             <h3>Age</h3>
                         </div>
                     </div>
+                    <div className='addToCart'>
+                        <h2>Exercise Details</h2>
+                        <Cart cart={cart}></Cart>
+                    </div>
                 </div>
+                {/* cart */}
+
             </div>
             <div className='question'>
                 <h1 className='text'>Answering Question</h1>
