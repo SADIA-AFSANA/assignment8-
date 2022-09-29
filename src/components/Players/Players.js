@@ -31,7 +31,11 @@ const Players = () => {
             </div>
         </div>
         <div className="cart-container">
-            <h1>My-Profile</h1>
+
+            <div className='name'>
+                <h1>Sadia Afsana</h1>
+                <p>@ Cumilla,Bangladesh</p>
+            </div>
         </div>
     </div>
 
