@@ -39,3 +39,23 @@
     background-color: antiquewhite;
     border-radius: 30px;
 }
+
+
+.text {
+    text-align: center;
+}
+
+.question {
+    margin-top: 30px;
+    border: 2px solid orange;
+    border-radius: 10px;
+    background-color: cornsilk;
+}
+
+@media screen and (max-width:570px) {
+    .activities {
+
+        grid-template-columns: 1fr;
+    }
+
+}
