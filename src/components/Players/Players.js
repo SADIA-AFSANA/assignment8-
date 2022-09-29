@@ -23,7 +23,10 @@ const Players = () => {
             </div>
             <div>
                 {
-                    players.map(player => <Player></Player>)
+                    players.map(player => <Player
+                        key={player.id}
+                        player={player}
+                    ></Player>)
                 }
             </div>
         </div>
